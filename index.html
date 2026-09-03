@@ -116,6 +116,14 @@
             margin: 1.5rem 0;
         }
 
+        /* MARCA — Configurar TODAS as imagens do tema */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
         .imagem-exemplo {
             margin: 1.5rem 0;
             text-align: center;
@@ -123,7 +131,12 @@
 
         /* MARCA — Configurar TODAS as imagens do tema (largura, altura, borda, etc.) */
         .img-amostra {
-            /* <-- configure aqui (ex.: width, height, border, border-radius) */
+             width: 100%;
+             height: 250px;
+             border: 3px solid #333;
+             border-radius: 10px;
+             margin: 10px 0;
+             object-fit: cover;
         }
 
         .video-exemplo {
@@ -133,9 +146,18 @@
 
         /* MARCA — Configurar TODOS os vídeos do tema (largura, altura, borda, etc.) */
         .video-amostra {
-            /* <-- configure aqui (ex.: width, height, border, border-radius) */
-        }
 
+            /* MARCA — Configurar TODOS os vídeos do tema */
+            .video-amostra {
+                width: 100%;
+                max-width: 700px;
+                height: 400px;
+                border: 2px solid #b8860b;
+                border-radius: 12px;
+                margin: 20px auto;
+                display: block;
+            }
+        }
         .legenda {
             font-size: 0.9rem;
             color: #777;
@@ -216,7 +238,7 @@
 
             <!-- MARCA IMAGEM 1: insira aqui uma imagem que represente o tema -->
             <div class="imagem-exemplo">
-                <!-- Inserir aqui a imagem -->
+                <img src="imagens/maquina-impressao-metal.webp" alt="Máquina de impressão 3D em metal com pó metálico.">
                 <p class="legenda">Máquina de impressão 3D em metal com pó metálico.</p>
             </div>
         </section>
@@ -236,7 +258,7 @@
 
             <!-- MARCA IMAGEM 2: insira aqui uma segunda imagem sobre o tema -->
             <div class="imagem-exemplo">
-                <!-- Inserir aqui a imagem -->
+                <img src="imagens/pecas-complexas-impressas-metal.png" alt="Peça metálica complexa pronta após a impressão">
                 <p class="legenda">Peça metálica complexa pronta após a impressão.</p>
             </div>
         </section>
@@ -251,35 +273,35 @@
             <!-- MARCA GALERIA: insira aqui as demais imagens sobre o tema (mínimo 8) -->
             <div class="galeria">
                 <figure class="imagem-exemplo">
-                    <!-- Inserir aqui a imagem -->
+                    <img src="imagens/po-metalico.png" class="img-amostra" alt="Pó metálico fino espalhado na câmara.">
                     <figcaption class="legenda">Pó metálico fino espalhado na câmara.</figcaption>
                 </figure>
                 <figure class="imagem-exemplo">
-                    <!-- Inserir aqui a imagem -->
+                    <img src="imagens/laser-fundindo-o-po.webp"  class="img-amostra" alt="Laser fundindo seletivamente o pó">
                     <figcaption class="legenda">Laser fundindo seletivamente o pó.</figcaption>
                 </figure>
                 <figure class="imagem-exemplo">
-                    <!-- Inserir aqui a imagem -->
+                    <img src="imagens/construcao-camada-por-camada.png" class="img-amostra" alt="Construção camada por camada.">
                     <figcaption class="legenda">Construção camada por camada.</figcaption>
                 </figure>
                 <figure class="imagem-exemplo">
-                    <!-- Inserir aqui a imagem -->
+                    <img src="imagens/implante_titanio_png.webp"  class="img-amostra" alt="Implante de titânio para medicina.">
                     <figcaption class="legenda">Implante de titânio para medicina.</figcaption>
                 </figure>
                 <figure class="imagem-exemplo">
-                    <!-- Inserir aqui a imagem -->
+                    <img src="imagens/peca-aeroespacial.png"  class="img-amostra" alt="Peça aeroespacial leve e resistente.">
                     <figcaption class="legenda">Peça aeroespacial leve e resistente.</figcaption>
                 </figure>
                 <figure class="imagem-exemplo">
-                    <!-- Inserir aqui a imagem -->
+                    <img src="imagens/pos-processamento-3d.png"  class="img-amostra" alt="Pós-processamento e acabamento.">
                     <figcaption class="legenda">Pós-processamento e acabamento.</figcaption>
                 </figure>
                 <figure class="imagem-exemplo">
-                    <!-- Inserir aqui a imagem -->
+                    <img src="imagens/engrenagem-metalica.png"  class="img-amostra" alt="Engrenagem metálica personalizada.">
                     <figcaption class="legenda">Engrenagem metálica personalizada.</figcaption>
                 </figure>
                 <figure class="imagem-exemplo">
-                    <!-- Inserir aqui a imagem -->
+                     <img src="imagens/liga-metalica.png"  class="img-amostra" alt="Ligas metálicas especiais disponíveis.">
                     <figcaption class="legenda">Ligas metálicas especiais disponíveis.</figcaption>
                 </figure>
             </div>
@@ -292,16 +314,38 @@
                     para ir às seções correspondentes da página.
                 </p>
             </div>
-            <div class="imagem-exemplo">
-                <!-- Inserir aqui a imagem -->
-                <map name="mapa-fluxo">
-                    <area shape="rect" coords="0,0,300,200" href="#tecnologias" alt="Tecnologias">
-                    <area shape="rect" coords="300,0,600,200" href="#aplicacoes" alt="Aplicações">
-                    <area shape="rect" coords="0,200,300,400" href="#galeria" alt="Galeria">
-                    <area shape="rect" coords="300,200,600,400" href="#vantagens" alt="Vantagens">
-                </map>
-                <p class="legenda">Fluxo do processo — clique nas regiões para navegar.</p>
-            </div>
+
+           <img src="imagens/mapa.png"
+              alt="Fluxo do processo de impressão 3D em metal"
+              usemap="#mapa-fluxo"
+              width="600"
+              height="400">
+
+           <map name="mapa-fluxo">
+
+           <area shape="rect"
+              coords="0,0,300,200"
+              href="#tecnologias"
+              alt="Preparação do pó metálico">
+            
+           <area shape="rect"
+           coords="300,0,600,200"
+           href="#aplicacoes"
+           alt="Impressão 3D a laser">
+
+    <area shape="rect"
+          coords="0,200,300,400"
+          href="#galeria"
+          alt="Pós-processamento">
+
+    <area shape="rect"
+          coords="300,200,600,400"
+          href="#vantagens"
+          alt="Peça final e vantagens">
+
+          <figcaption class="legenda">Ligas metálicas especiais disponíveis.</figcaption>
+
+</map>
         </section>
 
         <section id="aplicacoes">
@@ -319,14 +363,13 @@
 
             <!-- MARCA VÍDEO 1: insira aqui um vídeo sobre o tema -->
             <div class="video-exemplo">
-                <video class="video-amostra" controls poster="imagens/impressora-metal.jpg">
-                    <source src="" type="video/mp4">
-                    <source src="" type="video/webm">
-                    Seu navegador não suporta a tag de vídeo.
-                </video>
+                <iframe class="video-amostra" src="https://www.youtube.com/embed/t01n2ntH9_w"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
                 <p class="legenda">Demonstração do processo de impressão 3D em metal.</p>
             </div>
-        </section>
 
         <section id="vantagens">
             <h2>Vantagens e Desafios</h2>
@@ -350,11 +393,11 @@
 
             <!-- MARCA VÍDEO 2: insira aqui um segundo vídeo sobre o tema -->
             <div class="video-exemplo">
-                <video class="video-amostra" controls poster="imagens/peca-metal.jpg">
-                    <source src="" type="video/mp4">
-                    <source src="" type="video/webm">
-                    Seu navegador não suporta a tag de vídeo.
-                </video>
+                <iframe class="video-amostra" src="https://www.youtube.com/embed/sZhH9OdxQ5w"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
                 <p class="legenda">Etapas do pós-processamento de peças metálicas.</p>
             </div>
         </section>
